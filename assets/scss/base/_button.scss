@@ -1,0 +1,241 @@
+#opwr-theme {
+
+	.btn,
+	.button,
+	button,
+	button.button,
+	[type='button'], 
+	[type='reset'], 
+	[type='submit'] {
+		position: relative;
+		display: inline-block;
+		padding: 15px 30px;
+		margin: 5px 0;
+		font-size: 14px;
+		font-family: "Roboto Condensed";
+		font-weight: 100;
+		line-height: 20px;
+		text-align: center;
+		text-transform: uppercase;
+		border: none;
+		border-radius: 3px;
+		color: color(white);
+		background: color(primary);
+		box-sizing: border-box;
+		outline: none;
+		cursor: pointer;
+		transition: 0.3s ease;
+
+		&:after {
+			content:'';
+			position: absolute;
+			top: 0;
+			left: 50%;
+			z-index: 1;
+			display: block;
+			width: 1%;
+			height: 100%;
+			opacity: 0;
+			background: color(white);
+			transition: 0.2s ease;
+		}
+
+		&:hover{
+			transform: scale(0.94);
+			color: color(white);
+			background: color(charcoal);
+
+			&:after {
+				left: 0;
+				width: 100%;
+				height: 100%;
+				opacity: 0.1;
+			}
+		}
+
+		i {
+			margin-right: 5px;
+		}
+
+		& + .btn,
+		& + .button,
+		& + button,
+		& + button.button,
+		& + [type='button'], 
+		& + [type='reset'], 
+		& + [type='submit']  {
+			margin: 5px;
+		}
+
+
+		// Alternative
+
+		&.btn--alt,
+		&.button-alt {
+			color: color(charcoal);
+			background: none;
+			border: 1px solid color(alto);
+
+			&:hover {
+				color: color(charcoal);
+				background: none;
+
+				&:after {
+					background: color(charcoal);
+					opacity: 0.05;
+				}
+			}
+
+		}
+
+
+		// Inverse
+
+		&.btn--inv,
+		&.button--inv {
+			background: color(white);
+			color: color(charcoal);
+
+			&:hover {
+				background: color(whitesmoke);
+				color: color(charcoal);
+			}
+		}
+
+		// Icon
+
+		&.btn--icon,
+		&.button--icon {
+			position: relative;
+			padding-right: 60px;
+			text-align: left;
+			overflow: hidden;
+			transition: 0.3s ease;
+
+			i {
+				position: absolute;
+				top: 0;
+				right: 20px;
+				line-height: 50px;
+				margin: 0;
+				font-size: inherit;
+				line-height: inherit;
+				color: inherit;
+			}
+
+			&:hover {
+
+				i {
+					animation: bounceInLeft 0.8s 0.1s;
+				}
+			}
+		}
+
+		// Share
+
+		&.btn--share,
+		&.button--share {
+			height: 25px;
+			line-height: 25px;
+			font-size: 12px;
+			padding: 0 30px;
+			min-width: auto;
+
+			i {
+				font-size: inherit;
+				line-height: inherit;
+				color: inherit;
+				margin-right: 5px;
+			}
+
+		}
+
+		// Big
+
+		&.btn--lg {
+			padding: 5px 45px;
+			font-size: 16px;
+		}
+
+	}
+
+	// Toggle 
+
+	.opwr-toggle-view {
+		position: relative;
+		display: block;
+		z-index: 300;
+		margin: 0 auto -75px auto;
+		width: 110px;
+
+		.toggle-btn {
+			height: 50px;
+			width: 110px;
+			margin: 0;
+			background: color(tertiarydark);
+			border-radius: 50px;
+
+			&:hover {
+				cursor: pointer;
+			}
+
+			&.toggled {
+				&:after {
+					right: auto;
+					left: 0;
+					margin-left: 0;
+				}
+			}
+
+			&:after {
+				position: absolute;
+				top: 0;
+				left: 0;
+				margin-left: 60px;
+				content: '';
+				display:  block;
+				width: 50px;
+				height: 50px;
+				border-radius: 100%;
+				background: color(tertiary);
+				border: 1px solid color(white);
+				@include boxShadow(8);
+				transition: 0.2s ease;
+			}
+		}
+
+		i {
+			display: block;
+			position: absolute;
+			top: 0;
+			width: 50px;
+			height: 50px;
+			z-index: 10;
+			text-align: center;
+			line-height: 50px;
+			font-size: 24px;
+			color: color(charcoal);
+			opacity: .15;
+
+			&.active {
+				opacity: 1;
+			}
+
+			&.fa-car {
+				left: 0;
+			}
+
+			&.fa-tree {
+				right: 0;
+			}
+		}
+
+		label {
+			margin-top: 10px;
+			text-align: center;
+			font-size: 11px;
+			width: 100%;
+		}
+	}
+
+}

@@ -1,0 +1,58 @@
+#opwr-theme {
+
+	.opwr-video-wrapper {
+		.opwr-video-wrapper-inner {
+			max-width: $layout_width;
+			margin: auto;
+		}
+	}
+
+	img {
+		&.image {
+			width: 100%;
+			height: auto;
+			max-width: $layout_width;
+			margin: 40px auto;
+			@include boxShadow(16);
+		}
+	}
+
+	iframe {
+		display: block;
+
+		&.audio {
+			height: 166px;
+			max-width: $content_width;
+		}
+
+		&.instagram-media {
+			margin: 20px auto !important;
+		}
+
+		&.video {
+			width: 100%;
+			height: 210px;
+			margin: 40px auto;
+			background-size: cover;
+			background: transparent;
+			@include boxShadow(16);
+			
+			// @include susy-breakpoint($bp-sm, $susy) {
+			// 	height: auto;
+
+			// }
+			@include susy-breakpoint($bp-md, $susy) {
+				height: 420px;
+
+			}
+			@include susy-breakpoint($bp-lg, $susy) {
+				height: 760px;
+
+			}
+			@include susy-breakpoint($bp-xlg, $susy) {
+				height: 760px;
+
+			}
+		}
+	}
+}

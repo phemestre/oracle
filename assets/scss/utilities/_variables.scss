@@ -1,0 +1,110 @@
+/// All colors in standard variable format.
+///
+/// @group color
+
+$layout_width:  1400px;
+$content_width:  780px;
+$sidebar_width:  300px;
+
+
+$colors: (
+    // section--darks
+	black: #000000,
+	nero: #151515,
+	charcoal: #232323,
+	ashes: #333333,
+
+	// Mids
+	dusty: #999999,
+	boulder: #7a7a7a,
+	silver: #c0c0c0,
+	alto: #eeeeee,
+
+	// Lights
+	white: #FFFFFF,
+	whitesmoke: #f4f4f4,
+	ghost: #f9f9f9,
+
+	// Dust
+	celeste: #D1D2CA,
+	westar: #DCD9D2,
+	feta: #E8EBE0,
+	desertstorm: #F4F2EE,
+
+	//OPower
+	
+	primarylight: #E1F2AD,
+	primary: #9EC81A,
+	primarydark: #85A740,
+
+	secondarylight: #F7EAB4,
+	secondary: #ffd634,
+	secondarydark: #ffaf2c,
+
+	tertiary: #F7F6FF,
+	tertiarydark: #E8E4FB,
+	tertiarydarker: #625A8B,
+
+
+);
+
+
+
+// Box Shadows
+
+
+.box-shadow-1dp {
+	@include boxShadow(1);
+}
+
+.box-shadow-4dp {
+	@include boxShadow(4);
+}
+
+.box-shadow-6dp {
+	@include boxShadow(6);
+}
+.box-shadow-8dp {
+	@include boxShadow(8);
+}
+
+.box-shadow-12dp {
+	@include boxShadow(12);
+}
+
+.box-shadow-16dp {
+	@include boxShadow(16);
+}
+.box-shadow-24dp {
+	@include boxShadow(24);
+}
+
+// Text Shadows
+
+
+.text-shadow-1dp {
+	@include boxShadow(1);
+}
+
+.text-shadow-4dp {
+	@include boxShadow(4);
+}
+
+.text-shadow-6dp {
+	@include boxShadow(6);
+}
+.text-shadow-8dp {
+	@include boxShadow(8);
+}
+
+.text-shadow-12dp {
+	@include boxShadow(12);
+}
+
+.text-shadow-16dp {
+	@include boxShadow(16);
+}
+.text-shadow-24dp {
+	@include boxShadow(24);
+}
+

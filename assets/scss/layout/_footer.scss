@@ -1,0 +1,202 @@
+#opwr-theme {
+
+	// Extended Footer 
+
+	.opwr-footer-wrapper {
+		position: relative;
+		border-top: 1px solid color(whitesmoke);
+		background-color: color(white);
+
+		@include susy-breakpoint($bp-md, $susy) {
+			position: absolute;
+			left: 0;
+			bottom: -40px;
+			z-index: 10;
+			width: 100%;
+		}
+
+		.opwr-footer-wrapper-inner {
+			position: relative;
+			text-align: center;
+			z-index: 1;
+
+			@include susy-breakpoint($bp-md, $susy) {
+				height: 40px;
+				text-align: left;
+			}
+		}
+
+		&.footer--extended {
+			position: relative;
+			left: auto;
+			bottom: auto;
+			border-top: none;
+			overflow: hidden;
+			background-size: cover;
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-color: color(nero);
+			background-image: url('../../assets/img/mestre-empire-sao-paulo-city-brazil-banner-01.jpg');
+			// background-image: url('../../../wp-content/uploads/2017/06/mestre-empire-sao-paulo-city-brazil-banner-01.jpg')
+
+			&::after {
+				content:'';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(0,0,0,0.2);
+			}
+
+			.opwr-footer-wrapper-inner {
+				height: auto;
+				max-width: $layout_width;
+				margin: auto;
+				padding: 80px 20px;
+				text-align: center;
+			}
+
+			h1, h2, h3, h4, h5, p {
+				color: color(white);
+				max-width: $content-width;
+				margin-right: auto;
+				margin-left: auto;
+
+				&::after {
+					@include center(true, false);
+					width: 100px;
+				}
+			}
+
+			form {
+				text-align: center;
+
+				p {
+					margin: 2em auto
+				}
+			}
+
+			.opwr-icons {
+			    color: color(white);
+			    display: inline-block;
+			}
+		}
+
+		p.copyright {
+			display: block;
+			text-transform: uppercase;
+			font-size: 11px;
+			color: color(charcoal);
+
+
+			@include susy-breakpoint($bp-md, $susy) {
+				display: inline-block;
+				margin: 0;
+				line-height: 40px;
+			}
+		}
+
+		.ghost__text {
+			position: absolute;
+			left: 50%;
+			bottom: 0;
+			z-index: 0;
+			color: color(white);
+			opacity: 0.03;
+			font-family: 'Playfair Display';
+			font-family: 'Roboto Condensed';
+			font-size: 250px;
+			line-height: 1;
+			text-align: center;
+			letter-spacing: -0.1em;
+			margin-top: -0.2em;
+			pointer-events: none;
+		    transform: translate(-50%,40%);
+
+			.opwr-icons {
+				font-size: 150px;
+			}
+		}
+
+		.btn--messanger {
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			z-index: 999;
+		}
+
+		// Footer Menu
+		
+		.menu-footer-container {
+			display: inline-block;
+
+			ul, li {
+				display: inline-block;
+			}
+
+			ul {
+				display: inline-block;
+				margin-bottom: 20px;
+
+				@include susy-breakpoint($bp-md, $susy) {
+					margin: 0;
+				}
+
+				li {
+					display: inline-block;
+					border-right: 1px solid color(alto);
+
+					&.first {
+						
+					}
+
+					&.last {
+						border-right: none;
+					}
+
+					a {
+						padding: 0 5px;
+					}
+				}
+			}
+		}
+
+		// Social Icon
+
+		.opwr-social-wrapper {
+			display: inline-block;
+			margin: auto;
+
+			@include susy-breakpoint($bp-md, $susy) {
+				position: absolute;
+				top: 0;
+				right: 20px;
+				margin: 0;
+			}
+
+
+			&.social--icon {
+				ul {
+
+					li {
+						a {
+							color: color(charcoal);
+						}
+					}
+				}
+			}
+		}
+
+		// Newsletter
+
+		.opwr-newsletter-wrapper {
+
+			
+		}
+
+
+	}
+
+}

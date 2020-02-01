@@ -1,0 +1,124 @@
+#opwr-theme {
+
+	// Social Icons
+
+
+	.opwr-social-wrapper {
+		display: none;
+
+		@include susy-breakpoint($bp-md, $susy) {
+			display: block;
+			margin: 20px auto;
+		}
+
+		.opwr-social-wrapper-inner {	
+			
+		}
+
+		ul {
+			display: inline-block;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			li {
+				display: inline-block;
+				margin: 0 10px;
+
+				a {
+					display: block;
+				}
+
+				i {
+					font-size: 18px;
+					line-height: 40px;
+					
+				}
+
+				&:hover {
+					a, i {
+						animation: wobble 0.3s;
+					}
+				}
+
+				&::before,
+				&::after {
+					display: none;
+				}
+			}
+		}
+
+		&.social--icon {
+			ul {
+
+				li {
+
+				}
+			}
+		}
+
+		// Social Share 
+
+		&.social--share {
+			ul {
+				li {
+					font-size: 16px;
+					margin: 5px 8px;
+
+				}
+			}
+		}
+	}
+
+	// Social List
+
+	.opwr-social-list-wrapper {
+		display: none;
+
+		@include susy-breakpoint($bp-md, $susy) {
+			display: block;
+		}
+
+		.opwr-social-list-wrapper-inner {	
+			
+		}
+
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			li {
+				display: inline-block;
+				font-size: 12px;
+				line-height: 1.5;
+				margin: 0 10px;
+				text-transform: uppercase;
+
+				a {
+					text-decoration: none;
+				}
+
+			}
+		}
+	}
+
+	// section--dark
+
+	.section--dark {
+
+		.opwr-social-wrapper {
+
+			ul {
+
+				li {
+
+					a, i {
+						color: color(white);
+					}
+				}
+			}
+		}
+	}
+
+}

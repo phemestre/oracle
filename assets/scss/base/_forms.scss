@@ -1,0 +1,222 @@
+#opwr-theme {
+
+	*:disabled,
+	*.disabled {
+		opacity: 0.25;
+		pointer-events: none;
+	}
+
+	*:focus {
+	    outline: none;
+	}
+
+
+	form {
+		margin: auto;
+		text-align: left;
+		border: none;
+
+		p {
+			margin: 0;
+		}
+
+		.woocommerce-account & {
+			margin: 0;
+		}
+
+		label {
+			display: inline-block;
+			font-weight: bold;
+			color: inherit;
+			width: 100%;
+		}
+	}
+
+	form[class*="-form"] {
+		margin: 20px auto;
+		border-radius: 3px;
+
+
+		input,
+		textarea {
+			min-height: 50px;
+			// margin: 5px 0;
+		}
+	}
+
+	.ajax-loader {
+		display: none !important;
+		margin: auto !important;
+
+		&.is-active {
+			display: block !important;
+		}
+	}
+
+	span[class^="-not-valid-tip"], 
+	span[class*="-not-valid-tip"] {
+		font-size: 11px;
+		text-align: right;
+		text-transform: uppercase;
+	}
+
+	span[class^="-form-control-wrap"],
+	span[class*="-form-control-wrap"] {
+		
+	}
+
+	.form-item,
+	.contact-form-input  {
+		display: block;
+		padding: 0px;
+		margin: 5px auto;
+
+		&.form--block {
+			display: block;
+		}
+		
+		&.form--qty {
+
+			.add,
+			.remove {
+				display: inline-block;
+				height: 50px;
+				width: 50px;
+				line-height: 50px;
+				font-size: 12px;
+				text-align: center;
+				color: color(charcoal) !important;
+				background: color(whitesmoke);
+
+				&:hover {
+					color: color(white) !important;
+					background: color(charcoal);
+					cursor: pointer;
+				}
+			}
+
+			input {
+				width: 50px;
+				text-align: center;
+			}
+		}
+	}
+
+	input[type=text],
+	input[type=email],
+	input[type=password],
+	input[type=tel],
+	input[type=number],
+	textarea {
+		display: inline-block;
+		width: 100%;
+		min-height: 50px;
+		padding: 10px;
+		margin: 5px auto;
+		border: 1px solid color(alto);
+		border-radius: 3px;
+		box-sizing: border-box;
+		outline: none;
+		font-size: 14px;
+		text-align: left;
+		color: color(boulder);
+		background: color(white);
+		-webkit-appearance: none;
+	}
+
+	input[type=text] {
+		height: 50px;
+
+		&.search-field {
+			border-radius: 0;
+			-webkit-appearance: none;
+		}
+	}
+
+
+	input[type=number]::-webkit-inner-spin-button,
+	input[type=number]::-webkit-outer-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+
+
+	input[type=number] {
+		-moz-appearance: textfield;
+		font-family: 'Roboto Condensed', sans-serif;
+	}
+
+	input[type=checkbox],
+	input[type=radio] {
+		display: inline-block;
+		width: auto;
+		height: auto;
+		margin-right: 5px;
+	}
+
+	textarea {
+		min-height: 120px;
+	}
+
+	legend {
+		text-align: center;
+	}
+
+	fieldset {
+		border: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.lost_password {
+		text-align: right;
+		font-size: 1rem;
+	}
+
+
+	// Dropdown
+
+
+	select,
+	.select2 {
+		display: inline-block;
+		position: relative;
+		height: 50px;
+		width: 100%;
+		padding: 0;
+		margin: 5px auto;
+		border-radius: 3px;
+		outline: none;
+		font-size: 14px;
+		color: color(boulder);
+		text-align: left;
+		border: 1px solid color(alto);
+		background: color(white);
+		box-sizing: border-box;
+
+		.select2-selection--single {
+			border: none;
+			height: auto;
+		}
+
+		.select2-selection__rendered {
+			padding: 5px 10px;
+		}
+	}
+
+	.select2-dropdown {
+		border: 1px solid color(alto);
+
+
+	}
+
+	.select2-container--default .select2-results__option--highlighted[aria-selected],
+	.select2-container--default .select2-results__option--highlighted[data-selected] {
+		background: color(primary);
+	}
+
+
+
+		
+
+}

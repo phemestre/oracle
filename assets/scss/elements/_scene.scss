@@ -1,0 +1,490 @@
+#opwr-theme {
+
+
+	.opwr-scene-wrapper {
+		transform: scale(.75);
+
+		@include susy-breakpoint($bp-md, $susy) {
+			transform: scale(1);
+		}
+
+		.opwr-scene-wrapper-inner {
+			position: relative;
+			width: 100%;
+			height: 500px;
+			margin: 0 auto;
+			border-radius: 100%;
+
+			@include susy-breakpoint($bp-md, $susy) {
+				width: 500px;
+				margin: -20px auto 40px auto;
+			}
+		}
+
+		.mask {
+			position: relative;
+			width: 100%;
+			height: 500px;
+			border-radius: 100%;
+			overflow: hidden;
+			pointer-events: none;
+
+			@include susy-breakpoint($bp-md, $susy) {
+				width: 500px;
+			}
+		}
+
+		.tree {
+			position: absolute;
+			width: 30px;
+			height: 56px;
+			background: url("../../assets/img/tree-01.png") center no-repeat;
+			transform: scale(0.5);
+			pointer-events: none;
+
+			&.hide {
+				display: none;
+			}
+
+			&:nth-child(even) {
+				background: url("../../assets/img/tree-02.png") center no-repeat;
+			}
+
+			&.tree-01 {
+				bottom: 220px;
+				right: 200px;
+			}
+			&.tree-02 {
+				bottom: 170px;
+				right: 20px;
+			}
+			&.tree-03 {
+				bottom: 187px;
+				right: 170px;
+			}
+			&.tree-04 {
+				bottom: 195px;
+				right: 50px;
+			}
+			&.tree-05 {
+				bottom: 240px;
+				right: 180px;
+			}
+			&.tree-06 {
+				bottom: 205px;
+				left: 10px;
+			}
+			&.tree-07 {
+				bottom: 190px;
+				left: 32px;
+			}
+			&.tree-08 {
+				bottom: 143px;
+				left: 147px;
+			}
+			&.tree-09 {
+				bottom: 146px;
+				left: 250px;
+			}
+			&.tree-10 {
+				bottom: 245px;
+				left: 80px;
+			}
+			&.tree-11 {
+				bottom: 145px;
+				left: 170px;
+			}
+			&.tree-12 {
+				bottom: 172px;
+				left: 210px;
+			}
+			&.tree-13 {
+				bottom: 145px;
+				left: 49px;
+			}
+			&.tree-14 {
+				bottom: 155px;
+				left: 292px;
+			}
+			&.tree-15 {
+				bottom: 166px;
+				left: 230px;
+			}
+		}
+
+		.car {
+			position: absolute;
+			width: 56px;
+			height: 32px;
+			background: url("../../assets/img/car.png") center no-repeat;
+			transform: scale(0.65);
+			pointer-events: none;
+
+			&.hide {
+				display: none;
+			}
+
+			&.car-01 {
+				bottom: 140px;
+				right: 130px;
+				animation: 3.5s .3s car infinite;
+			}
+			&.car-02 {
+				bottom: 156px;
+				right: 158px;
+				animation: 3s .1s car infinite;
+			}
+			&.car-03 {
+				bottom: 142px;
+				right: 83px;
+				animation: 3.2s .1s car infinite;
+			}
+			&.car-04 {
+				bottom: 152px;
+				right: 197px;
+				animation: 3s .3s car infinite;
+			}
+			&.car-05 {
+				bottom: 165px;
+				right: 227px;
+				transform: scale(0.5);
+				animation: 2.5s carsmall infinite;
+			}
+			&.car-06 {
+				bottom: 175px;
+				left: 30px;
+				transform: scale(0.45);
+				animation: 2.5s .1s carsmall infinite;
+			}
+			&.car-07 {
+				bottom: 162px;
+				left: 45px;
+				transform: scale(0.45);
+				animation: 2.3s carsmall infinite;
+			}
+		}
+
+		.bird {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 23px;
+			height: 9px;
+			background: url("../../assets/img/bird.png") center no-repeat;
+			animation: 1s hover infinite;
+			pointer-events: none;
+
+			&.bird-01 {
+				top: 125px;
+				right: 200px;
+				transform: scale(0.7);
+				animation: 0.5s hover infinite;
+			}
+			&.bird-02 {
+				top: 135px;
+				right: 180px;
+				animation: 0.8s hover infinite;
+			}
+			&.bird-03 {
+				top: 115px;
+				right: 175px;
+			}
+		}
+
+		.cloud {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 42px;
+			height: 24px;
+			pointer-events: none;
+
+
+			&.cloud-01 {
+				top: 75px;
+				left: 155px;
+				background: url("../../assets/img/cloud-01.png") center no-repeat;
+				animation: 8s hover infinite;
+			}
+			&.cloud-02 {
+				top: 80px;
+				left: 180px;
+				z-index: 10;
+				background: url("../../assets/img/cloud-02.png") center no-repeat;
+				animation: 5s hover infinite;
+			}
+			&.cloud-03 {
+				top: 110px;
+				left: 350px;
+				background: url("../../assets/img/cloud-03.png") center no-repeat;
+				animation: 20s flyleft infinite;
+			}
+	
+			&.cloud-04 {
+				top: 155px;
+				left: 350px;
+				background: url("../../assets/img/cloud-01.png") center no-repeat;
+				animation: 5s hover infinite;
+			}
+		}
+		
+		.scene {
+			position: absolute;
+			@include center(true,false);
+			bottom: 0;
+			z-index: 20;
+			width: 360px;
+			height: 360px;
+			margin: auto;
+			animation: 5s scenehover infinite;
+			pointer-events: none;
+
+			&.scene-car {
+				background: url("../../assets/img/scene-car.png") center no-repeat;
+
+				.tree {
+					display: none;
+				}
+
+			}
+
+			&.scene-tree {
+				background: url("../../assets/img/scene-tree.png") center no-repeat;
+
+				.car {
+					display: none;
+				}
+			}
+		}
+
+		.shadow {
+			position: absolute;
+			@include center(true,false);
+			bottom: -50px;
+			width: 334px;
+			height: 112px;
+			margin: auto;
+			background: url("../../assets/img/shadow.png") center no-repeat;
+			animation: 5s shadow infinite;
+			pointer-events: none;
+		}
+
+		.drip {
+			position: absolute;
+			z-index: 25;
+			width: 110px;
+			height: 23px;
+			margin: auto;
+			background: url("../../assets/img/drip.png") center no-repeat;
+			pointer-events: none;
+
+			&.drip-01 {
+				left: 30px;
+				bottom: 70px;
+				animation: 1s 0.5s drip infinite;
+
+				@include susy-breakpoint($bp-md, $susy) {
+					left: 90px;
+				}
+			}
+			&.drip-02 {
+				left: 32px;
+				bottom: 70px;
+				animation: 1s drip infinite;
+
+				@include susy-breakpoint($bp-md, $susy) {
+					left: 95px;
+				}
+			}
+		}
+
+
+		.splash {
+			position: absolute;
+			left: 40px;
+			bottom: -20px;
+			z-index: 1;
+			width: 110px;
+			height: 23px;
+			margin: auto;
+			background: url("../../assets/img/splash.png") center no-repeat;
+			pointer-events: none;
+
+			@include susy-breakpoint($bp-md, $susy) {
+				left: 100px;
+			}
+		}
+	}
+
+	.graph {
+		position: relative;
+		width: 82px;
+		position: absolute;
+		left: 0;
+		bottom: 370px;
+		z-index: 200;
+		margin: auto;
+		transform: scale(1.25);
+
+		@include susy-breakpoint($bp-md, $susy) {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			z-index: 100;
+			transform: scale(1);
+		}
+		
+		.graph--data {
+			display: inline-block;
+			width: 38px;
+
+			&:hover {
+				cursor: pointer;
+			}
+
+
+			.graph-bar {
+				width: 20px;
+				margin: auto;
+				background: color(tertiarydark);
+			}
+
+			&.graph--value-01 {
+				.graph-bar {
+					height: 120px;
+				}
+				&:hover {
+					.graph-bar {
+						background: color(secondarydark);
+					}
+				}
+			}
+			&.graph--value-02 {
+				.graph-bar {
+					height: 50px;
+				}
+
+				&:hover {
+					.graph-bar {
+						background: color(primary);
+					}
+				}
+				
+			}
+		}
+
+		label {
+			margin-top: 10px;
+			text-align: center;
+		}
+	}
+
+}
+
+
+@keyframes flyright {
+	0% {
+		transform: translate(-1000%, 0);
+	}
+	99% {
+		transform: translate(1000%, 0);
+	}
+	100% {
+		transform: translate(-1000%, 0);
+	}
+}
+
+@keyframes flyleft {
+    0% {
+        transform: translate(1000%, 0);
+    }
+	99% {
+		transform: translate(-1000%, 0);
+	}
+	100% {
+		transform: translate(1000%, 0);
+	}
+}
+@keyframes sidetoside {
+    0% {
+        transform: translate(-20%, 0);
+    }
+	50% {
+		transform: translate(200%, 0);
+	}
+	100% {
+		transform: translate(-20%, 0);
+	}
+}
+
+@keyframes car {
+    0% {
+        transform: translate(-5%, 0) scale(0.65);
+    }
+	50% {
+		transform: translate(10%, 0) scale(0.65);
+	}
+	100% {
+		transform: translate(-5%, 0) scale(0.65);
+	}
+}
+@keyframes carsmall {
+    0% {
+        transform: translate(-5%, 0) scale(0.45);
+    }
+	50% {
+		transform: translate(10%, 0) scale(0.45);
+	}
+	100% {
+		transform: translate(-5%, 0) scale(0.45);
+	}
+}
+
+@keyframes hover {
+    0% {
+        transform: translate(0, -10%);
+    }
+	50% {
+		transform: translate(0, 20%);
+	}
+	100% {
+		transform: translate(0, -10%);
+	}
+}
+
+@keyframes scenehover {
+    0% {
+        transform: translate(-50%, 0%);
+    }
+	50% {
+		transform: translate(-50%, -3%);
+	}
+	100% {
+		transform: translate(-50%, 0%);
+	}
+}
+
+@keyframes shadow {
+    0% {
+        opacity: 1;
+    }
+	50% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes drip {
+    0% {
+		bottom: 70px;
+
+	}
+	99% {
+		bottom: -5px;
+    }
+	100% {
+		bottom: 70px;
+	}
+}

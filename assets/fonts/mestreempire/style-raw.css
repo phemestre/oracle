@@ -1,0 +1,66 @@
+@font-face {
+  font-family: 'mestreempire';
+  src:  url('fonts/mestreempire.eot?72j06w');
+  src:  url('fonts/mestreempire.eot?72j06w#iefix') format('embedded-opentype'),
+    url('fonts/mestreempire.ttf?72j06w') format('truetype'),
+    url('fonts/mestreempire.woff?72j06w') format('woff'),
+    url('fonts/mestreempire.svg?72j06w#mestreempire') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.mstr-icons {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'mestreempire' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  
+  /* Enable Ligatures ================ */
+  letter-spacing: 0;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  font-feature-settings: "liga";
+  -webkit-font-variant-ligatures: discretionary-ligatures;
+  font-variant-ligatures: discretionary-ligatures;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.mstr-mestre-within:before {
+  content: "\e902";
+}
+.mstr-crown:before {
+  content: "\e900";
+}
+.mstr-established:before {
+  content: "\e901";
+}
+.mstr-mestre:before {
+  content: "\e910";
+}
+.mstr-pillar-power:before {
+  content: "\e911";
+}
+.mstr-pillar-vision:before {
+  content: "\e912";
+}
+.mstr-pillar-wisdom:before {
+  content: "\e913";
+}
+.mstr-signature:before {
+  content: "\e914";
+}
+.mstr-sp-o:before {
+  content: "\e915";
+}
+.mstr-sp:before {
+  content: "\e916";
+}
